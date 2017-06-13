@@ -1,0 +1,195 @@
+{
+  "document_name": "Analysis Common App: assocplot",
+  "app_name": "app_assocplot.json",
+  "maintainer": "",
+  "maintainer_email": "",
+  "location": "Common_Tools/",
+  "summary": "",
+  "tags": [""],
+  "version": "",
+  "introSpec": {
+	  "app_purpose": "",
+	  "app_use_cases": "",
+	  "app_requirements": "",
+	  "app_output": "",
+	  "app_how_does_it_work": ""
+	},
+  "inputSpec": [
+    {
+      "common": [
+        {
+          "name": "Data File",
+          "class": "file",
+          "label": "",
+          "optional": "False",
+          "details": ""
+        }
+        {
+          "name": "LD File",
+          "class": "file",
+          "label": "",
+          "optional": "False",
+          "details": ""
+        }
+        {
+          "name": "Label",
+          "class": "string",
+          "label": "Enter a prefix for your output plot (no spaces).",
+          "optional": "False",
+          "details": ""
+        },
+        {
+          "name": "Output Type",
+          "class": "string",
+          "label": "The filetype of the output plot. Must choose 'png', 'tiff', or 'pdf'",
+          "optional": "False",
+          "details": ""
+        }
+        {
+          "name": "Output Arguments",
+          "class": "string",
+          "label": "Optional arguments for graphics function: eg. width, height, res, ppi, units, etc.",
+          "optional": "False",
+          "details": ""
+        }
+        {
+          "name": "Trait Name",
+          "class": "string",
+          "label": "Optional name of trait to appear in plot title. Ex: LDL, SBP, etc.",
+          "optional": "False",
+          "details": ""
+        }
+        {
+          "name": "Group Name",
+          "class": "string",
+          "label": "Optional group/project name to appear in plot title. Ex: CHARGE, CHARGE-T2D, TOPMED, etc.",
+          "optional": "False",
+          "details": ""
+        }
+        {
+          "name": "LD Filetype",
+          "class": "string",
+          "label": "The format of the LD file. PLINK or Haploview supported at this time.",
+          "optional": "False",
+          "details": ""
+        }
+        {
+          "name": "SNP Column",
+          "class": "string",
+          "label": "Marker column name",
+          "optional": "False",
+          "details": ""
+        }
+        {
+          "name": "Gene Column",
+          "class": "string",
+          "label": "Gene (or other form of aggregation) column name",
+          "optional": "False",
+          "details": ""
+        }
+        {
+          "name": "Chromosome Column",
+          "class": "string",
+          "label": "Chromosome column name",
+          "optional": "False",
+          "details": ""
+        }
+        {
+          "name": "Position Column",
+          "class": "string",
+          "label": "Position column name",
+          "optional": "False",
+          "details": ""
+        }
+        {
+          "name": "P-Value Column",
+          "class": "string",
+          "label": "P-value column name",
+          "optional": "False",
+          "details": ""
+        }
+        {
+          "name": "Frequency Column",
+          "class": "string",
+          "label": "Frequency column name",
+          "optional": "False",
+          "details": ""
+        }
+        {
+          "name": "HetDF Column",
+          "class": "string",
+          "label": "HetDF column name",
+          "optional": "False",
+          "details": ""
+        }
+        {
+          "name": "Index SNP",
+          "class": "string",
+          "label": "Index SNP (chr:pos) in the specific region to display.",
+          "optional": "False",
+          "details": ""
+        }
+        {
+          "name": "Index Gene",
+          "class": "string",
+          "label": "Index gene in the specific region to display.",
+          "optional": "False",
+          "details": ""
+        }
+        {
+          "name": "Index Region",
+          "class": "string",
+          "label": "Index region to display. Ex: '16:100000,16:200000'",
+          "optional": "False",
+          "details": ""
+        }
+        {
+          "name": "Region Width",
+          "class": "string",
+          "label": "	Width of window around index SNP. Default 500kb.",
+          "optional": "False",
+          "details": ""
+        }
+        {
+          "name": "Ancestry",
+          "class": "string",
+          "label": "	Ancestry group (AFR or CEU)",
+          "optional": "False",
+          "details": ""
+        }
+        {
+          "name": "Chr",
+          "class": "string",
+          "label": "",
+          "optional": "False",
+          "details": ""
+        }
+      ]
+    },
+    {
+      "advanced": [
+	    {
+          "name": "",
+		  "class": "",
+		  "label": "",
+		  "optional": "False",
+		  "details": ""
+	    }
+	  ]
+    }
+  ],
+  "outputSpec": [
+    {
+      "name": "Assoc Plot",
+	  "class": "file",
+	  "label": "",
+	  "details": ""
+	}
+  ],
+  "runSpec": {
+    "details": ""
+  },
+  "cmdLineSpec": {
+    "details": ""
+  }
+}
