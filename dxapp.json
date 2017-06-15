@@ -1,0 +1,188 @@
+{
+  "name": "assocplot",
+  "title": "Regional association plot",
+  "summary": "assocplot",
+  "dxapi": "1.0.0",
+  "inputSpec": [
+    {
+      "name": "datafile",
+      "label": "Required: datafile",
+      "class": "file",
+      "optional": false
+    },
+    {
+      "name": "ldfile",
+      "label": "Required: ldfile",
+      "class": "file",
+      "optional": false
+    },
+    {
+      "name": "label",
+      "label": "Label: Enter a prefix for your output plot (no spaces).",
+      "class": "string",
+      "optional": true,
+      "default": "test"
+    },
+    {
+      "name": "output_type",
+      "label": "The filetype of the output plot. Must choose 'png', 'tiff', or 'pdf'.",
+      "class": "string",
+      "optional": true,
+      "default": "png",
+      "choices": [
+        "png",
+        "tiff",
+        "pdf"
+      ]
+    },
+    {
+      "name": "output_args",
+      "label": "Optional arguments for graphics function: eg. width, height, res, ppi, units, etc.",
+      "class": "string",
+      "optional": true,
+      "default": ""
+    },
+    {
+      "name": "traitname",
+      "label": "Optional name of trait to appear in plot title. Ex: LDL, SBP, etc.",
+      "class": "string",
+      "optional": true,
+      "default": ""
+    },
+    {
+      "name": "groupname",
+      "label": "Optional group/project name to appear in plot title. Ex: CHARGE, CHARGE-T2D, TOPMED, etc.",
+      "class": "string",
+      "optional": true,
+      "default": ""
+    },
+    {
+      "name": "ld_filetype",
+      "label": "The format of the LD file. PLINK or Haploview supported at this time.",
+      "class": "string",
+      "optional": true,
+      "default": "PLINK",
+      "choices": [
+        "PLINK",
+        "Haploview"
+      ]
+    },
+    {
+      "name": "snp_col",
+      "label": "Marker column name",
+      "class": "string",
+      "optional": true,
+      "default": "Name"
+    },
+    {
+      "name": "gene_col",
+      "label": "Gene (or other form of aggregation) column name",
+      "class": "string",
+      "optional": true,
+      "default": "gene"
+    },
+    {
+      "name": "chr_col",
+      "label": "Chromosome column name",
+      "class": "string",
+      "optional": true,
+      "default": "chr"
+    },
+    {
+      "name": "pos_col",
+      "label": "Position column name",
+      "class": "string",
+      "optional": true,
+      "default": "pos"
+    },
+    {
+      "name": "p_col",
+      "label": "P-value column name",
+      "class": "string",
+      "optional": true,
+      "default": "p"
+    },
+    {
+      "name": "freq_col",
+      "label": "Frequency column name",
+      "class": "string",
+      "optional": true,
+      "default": "maf"
+    },
+    {
+      "name": "hetdf_col",
+      "label": "HetDF column name",
+      "class": "string",
+      "optional": true,
+      "default": "HetDF"
+    },
+    {
+      "name": "index_snp",
+      "label": "Index SNP (chr:pos) in the specific region to display.",
+      "class": "string",
+      "optional": true,
+      "default": ""
+    },
+    {
+      "name": "index_gene",
+      "label": "Index gene in the specific region to display.",
+      "class": "string",
+      "optional": true,
+      "default": ""
+    },
+    {
+      "name": "index_region",
+      "label": "Index region to display. Ex: '16:100000,16:200000'",
+      "class": "string",
+      "optional": true,
+      "default": ""
+    },
+    {
+      "name": "region_width",
+      "label": "Width of window around index SNP. Default 500kb.",
+      "class": "string",
+      "optional": true,
+      "default": "500000"
+    },
+    {
+      "name": "ancestry",
+      "label": "Ancestry group (AFR or CEU)",
+      "class": "string",
+      "optional": true,
+      "default": "CEU",
+      "choices": [
+        "AFR",
+        "CEU"
+      ]
+    },
+    {
+      "name": "chr",
+      "label": "Chromosome number",
+      "class": "string",
+      "optional": false
+    }
+  ],
+  "outputSpec": [
+    {
+      "name": "assoc_plot",
+      "label": "regional_association.png",
+      "class": "file"
+    }
+  ],
+  "runSpec": {
+    "systemRequirements": {
+      "*": {
+        "instanceType": "mem2_hdd2_x2"
+      }
+    },
+    "file": "src/code.sh",
+    "interpreter": "bash"
+  },
+  "access": {
+    "project": "CONTRIBUTE",
+    "allProjects": "CONTRIBUTE",
+    "network": [
+      "*"
+    ]
+  }
+}
